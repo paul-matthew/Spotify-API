@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+body{
+    background-color: black;
+    height:800px;
+}
+
+.backgrd{
+  animation: sliding-background 40s linear infinite;
+  background: url("https://media.blogto.com/articles/20201011-sunrise-toronto.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70") no-repeat left / 120%;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  width: 1200px;
+}
+.title-blk {
+        position: fixed;
+        text-align: center;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);      
+   }
+
+.funkytitle {
+  position: fixed;
+  text-align: center;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);   
+  display: block;
+  color: #cf1b1b;
+  font-size: 70px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  line-height: 60px;
+}
+.btn{
+  position: relative;
+  top:90px;
+  border-color: white;
+  }
+
+.funkytitle::before {
+  content: "Spotify API";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+  animation:mymove 3s;
+  animation-iteration-count:infinite;
+}
+
+.funkytitle::after {
+  content: "Spotify API";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+  animation:mymove2 3s;
+  animation-iteration-count:infinite;
+}
+
+/*Changed from on hover, to being consistent loop animation
+.funkytitle:hover:before {
+  top: 10px;
+  left: 10px;
+}
+
+.funkytitle:hover:after {
+  top: -10px;
+  left: -10px;
+} 
+*/
+
+@keyframes mymove{
+  from {top:0px; left:0px}
+  to{top:10px; left:10px}
+}
+@keyframes mymove2{
+  from {top:0px; left:0px}
+  to{top:-10px; left:-10px}
+}
+
+
+ @keyframes sliding-background {
+	 0%, 100% {
+		 background-position: 0 40%;
+	}
+	 50% {
+		 background-position: 100% 40%;
+	}
+}
+
+  
+  /*menu bar*/
+
+.menu{
+  position:fixed ;
+  left:0;
+  top:0;
+  z-index: 3;
+  width:100%;
+}
+.menubtn{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  position: relative;
+  text-align: center;
+  margin:8px;
+  border: solid black;
+  width:40px;
+  background: white;
+}
+.menubar {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 2px;
+  margin-top:2px;
+}
+.banner{
+  display: inline-block;
+  height:50px;
+  background-color: white;
+  width:100%
+}
+
+.menubtn:hover{
+  border-color: orangered;
+  transition: filter 0.2s ease-in;
+  cursor: pointer;
+}
+
+.dropdown {
+  display:none;
+  position:relative;
+  bottom:0px;
+  width: 90px;
+  background-color: red;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.showme {
+  display:block;
+}
+
+/*menu bar:links */
+.dropdown a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.dropdown a:hover {
+  background-color: #ddd;
+  width: 90px;
+  color: black;
+}
+
+
+
+
+.footer{
+  color:#222; font-size:16px; font-weight:400;
+  background-color: white;
+  color: white;
+}
+   .madeby{
+     color:#c50000;
+   }
+   .paulmatthew{
+     color: black;
+   }

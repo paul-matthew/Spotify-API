@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+form{
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;     
+}
+
+.btn.dropdown-toggle {
+  width: 150px;
+  text-align: center;
+}
+
+.form-control {
+  border-radius: 100px;
+  font-family: "sans-serif";
+  font-size: 15px;
+  max-width:300px;
+}
+
+.btn-success {
+  width:130px;
+  background-color: #3b7d4a im !important;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-family: "sans-serif";
+  font-size: 20px;
+  height:40px;
+  position: relative;
+  top:20px;
+  }
+
+.btn-success:hover {
+  background-color: #54795d;
+  transition: 0.2s;
+}
+
+img.track {
+  border: 3px solid #0408f3;
+}
+
+
+
+@media (min-width:340px){
+.container{
+    position: fixed;
+    width: 375px;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-style:hidden;
+    height:450px;
+    margin:auto;
+}
+.row{
+    position: relative;
+    top:20px;
+    border: hidden;
+    
+}
+.list-container{
+width:200px;
+border:hidden;
+margin-left:2px
+}
+img{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+.song-container{
+    position:relative;
+    color: white;
+    font-size: 15px;
+    width:160px;
+    text-align: center;
+    border-style: hidden;
+    border-color: green;
+    margin-left:13px;
+   
+}
+
+
+
+
+}
+@media (max-width:340px){
+    .container{
+        position: fixed;
+        width: 280px;
+        text-align: center;
+        top:63%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        border-style: solid;
+        height:650px;
+    }
+
+    .list-container{
+        position: relative;
+        width:95%;
+        top:20px;
+        max-width:400px;
+        border-style: solid;
+        margin: auto;
+    }
+
+
+    .song-container{
+        display:flex;
+        position: relative;
+        top: 20px;
+        left:10px;
+        color: white;
+        font-size: 15px;
+        width:280px;
+        margin:auto;
+        text-align: left;
+        border:10px;
+        margin:5px;
+
+    }
+    }
