@@ -21,7 +21,9 @@ const APIController = (function() {
     
     const _getGenres = async (token) => {
 
-        const result = await fetch(`https://api.spotify.com/v1/browse/categories?country=CA`, {
+        const limit = 10;
+
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories?country=CA&limit=${limit}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
@@ -43,11 +45,11 @@ const APIController = (function() {
         return data.playlists.items;
     }
 
-    const _getTracks = async (token, tracksEndPoint) => {
+    const _getTracks = async (token, xx) => {
 
-        const limit = 10;
+        const limit = 30;
 
-        const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
+        const result = await fetch(`${xx}?limit=${limit}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
@@ -144,10 +146,10 @@ const UIController = (function() {
                 <img src="${img}" alt=""width="100px" height="100px">        
             </div>
             <div class="row col-sm-12 px-0">
-                <label for="Genre" class="form-label col-sm-12">${title}:</label>
+                <label for="Genre" style="font-size:20px" class="form-label col-sm-12">${title}</label>
             </div>
             <div class="row col-sm-12 px-0">
-                <label for="artist" class="form-label col-sm-12">By ${artist}:</label>
+                <label for="artist" style="color:blue" class="form-label col-sm-12">${artist}</label>
             </div> 
             `;
 
