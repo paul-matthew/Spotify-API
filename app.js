@@ -3,7 +3,7 @@ const APIController = (function() {
     const clientId = '8ca75027bc4b4c4ebc66f558315aef3d';
     const clientSecret = 'f96c345009814c01bf71b8700ce22cc3';
 
-    // private methods
+    //Fetch data from spotify api; private methods
     const _getToken = async () => {
 
         const result = await fetch('https://accounts.spotify.com/api/token', {
@@ -15,8 +15,8 @@ const APIController = (function() {
             body: 'grant_type=client_credentials'
         });
 
-        const data = await result.json();
-        return data.access_token;
+        const spot = await result.json();
+        return spot.access_token;
     }
     
     const _getGenres = async (token) => {
@@ -28,8 +28,8 @@ const APIController = (function() {
             headers: { 'Authorization' : 'Bearer ' + token}
         });
 
-        const data = await result.json();
-        return data.categories.items;
+        const spot = await result.json();
+        return spot.categories.items;
     }
 
     const _getPlaylistByGenre = async (token, genreId) => {
@@ -41,32 +41,32 @@ const APIController = (function() {
             headers: { 'Authorization' : 'Bearer ' + token}
         });
 
-        const data = await result.json();
-        return data.playlists.items;
+        const spot = await result.json();
+        return spot.playlists.items;
     }
 
-    const _getTracks = async (token, xx) => {
+    const _getTracks = async (token, tracklist) => {
 
         const limit = 30;
 
-        const result = await fetch(`${xx}?limit=${limit}`, {
+        const result = await fetch(`${tracklist}?limit=${limit}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
 
-        const data = await result.json();
-        return data.items;
+        const spot = await result.json();
+        return spot.items;
     }
 
-    const _getTrack = async (token, trackEndPoint) => {
+    const _getTrack = async (token, trackdetail) => {
 
-        const result = await fetch(`${trackEndPoint}`, {
+        const result = await fetch(`${trackdetail}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
 
-        const data = await result.json();
-        return data;
+        const spot = await result.json();
+        return spot;
     }
 
     return {
@@ -79,11 +79,11 @@ const APIController = (function() {
         getPlaylistByGenre(token, genreId) {
             return _getPlaylistByGenre(token, genreId);
         },
-        getTracks(token, tracksEndPoint) {
-            return _getTracks(token, tracksEndPoint);
+        getTracks(token, tracklist) {
+            return _getTracks(token, tracklist);
         },
-        getTrack(token, trackEndPoint) {
-            return _getTrack(token, trackEndPoint);
+        getTrack(token, trackdetail) {
+            return _getTrack(token, trackdetail);
         }
     }
 })();
@@ -155,7 +155,7 @@ const UIController = (function() {
 
             detailDiv.insertAdjacentHTML('beforeend', html)
         },
-
+        //method to reset fields
         resetTrackDetail() {
             this.inputField().songDetail.innerHTML = '';
         },
