@@ -12,14 +12,14 @@
 
         <title>Spotify API</title>
     </head>
-    <body style="overflow-y:auto">
+    <body style="overflow-y:auto; background-color:rgb(69,12,28);background-image: url(https://cdn.dribbble.com/users/1864713/screenshots/4774552/ripple_loader_-_copy.gif); background-position:center;background-repeat:no-repeat">
       <!-- Banner -->
       <div class="menu">
-        <div class="banner" id="menubtn" onclick="dropdown()">
+        <div class="banner" id="menubtn" onclick="dropdown();myFunction(this)">
             <div class="menubtn">
-              <div class="menubar"></div>
-              <div class="menubar"></div>
-              <div class="menubar"></div>
+              <div class="menubar1"></div>
+              <div class="menubar2"></div>
+              <div class="menubar3"></div>
             </div>
         </div>
         <div class="dropdown" id="mydropdown">
@@ -28,16 +28,15 @@
             <div><a href="https://paul-matthew-portfolio.netlify.app/contact">Contact</a></div>
         </div>
       </div>
-      <!-- Banner -->
 
       <!-- Background image -->
-      <div class="backgrd">
+      <div class="backgrd2">
         <div class="title-blk">
         </div>
       </div>
-      <!-- Background image -->
-
-      <div class='container'>        
+      
+      <!-- Main Body -->
+      <div class='parent-container'>        
         <form action=''>
             <input type='hidden' id='hidden_token'>
             <div class='form-group'>
@@ -60,13 +59,19 @@
                 <button type='submit' id='btn_submit' class='btn btn-success'>Search</button>
             </div>          
         </form>        
-        <div class='row'>
-            <div class='list-container'>
+        <div class='output-container'>
+          <div class="tracks-container">
+            <div class='tracks'>
                 <div class='list-group song-list' style=height:200px;overflow-y:auto>
                 </div>                                             
             </div>
-            <div class="song-container"id='song-detail'>                
+          </div>
+            <div class="song"id='song-detail'>     
+              <div class="songimg"></div>           
             </div>
+        </div>
+        <div class="preview">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4KW1lqgSr8TKrvBII0Brf8?utm_source=generator" width="70%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>   
       </div>
 
@@ -76,9 +81,6 @@
           <span class="madeby">Application by: </span><span class="paulmatthew">Paul.Matthew</span>🌺
         </div>
       </footer>
-      <!-- footer -->
-      
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

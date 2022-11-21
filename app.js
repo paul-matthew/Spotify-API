@@ -69,6 +69,8 @@ const APIController = (function() {
         return spot;
     }
 
+   
+
     return {
         getToken() {
             return _getToken();
@@ -142,15 +144,16 @@ const UIController = (function() {
 
             const html = 
             `
-            <div class="row col-sm-12 px-0">
+            <div class="songimg">
                 <img src="${img}" alt=""width="100px" height="100px">        
             </div>
-            <div class="row col-sm-12 px-0">
+            <div><span style="background-color:grey";>
                 <label for="Genre" style="font-size:20px" class="form-label col-sm-12">${title}</label>
+                </span>
             </div>
-            <div class="row col-sm-12 px-0">
+            <div ><span style="background-color:grey">
                 <label for="artist" style="color:blue" class="form-label col-sm-12">${artist}</label>
-            </div> 
+            </span></div> 
             `;
 
             detailDiv.insertAdjacentHTML('beforeend', html)
