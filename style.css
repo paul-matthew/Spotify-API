@@ -41,13 +41,14 @@ form{
     }
 }
 
-@media (orientation:landscape) and (max-height:280px){
+@media (orientation:landscape) and (max-height:300px){
   .parent-container{
     position: absolute;
+    bottom:-180%;
     left:50%;
-    height:350px;
-    transform: translate(-50%,-50%);
+    transform: translate(-90%,-90%);
     margin:auto;
+    height:450px;
     }
 }
 @media (orientation:landscape) and (max-height:540px){
