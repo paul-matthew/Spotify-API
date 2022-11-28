@@ -252,7 +252,10 @@ const APPController = (function(UICtrl, APICtrl) {
         const track = await APICtrl.getTrack(token, trackEndpoint);
         // load the track details
         UICtrl.createTrackDetail(track.album.images[2].url, track.name, track.artists[0].name);
-    });    
+    });
+    
+
+    
 
     return {
         init() {
@@ -265,3 +268,10 @@ const APPController = (function(UICtrl, APICtrl) {
 
 // will need to call a method to load the genres on page load
 APPController.init();
+
+window.addEventListener('click',function(e) {
+    var spotpreview=document.getElementById("spotify");
+    if (e.target.classlist.contains('song-list')){
+        spotpreview.classList.toggle("showme");
+    }
+})

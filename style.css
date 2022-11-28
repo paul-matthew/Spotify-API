@@ -139,6 +139,7 @@ border-style: hidden;
 }
 
 .preview{
+  display:none;
   position:relative;
   top:40px;
 
