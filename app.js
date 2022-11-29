@@ -131,7 +131,7 @@ const UIController = (function() {
 
         // need method to create a track list group item 
         createTrack(id, name) {
-            const html = `<a href="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}">${name}</a>`;
+            const html = `<a href="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}"onclick="player()">${name} </a>`;
             document.querySelector(DOMElements.divSonglist).insertAdjacentHTML('beforeend', html);
         },
 
@@ -147,11 +147,11 @@ const UIController = (function() {
             <div class="songimg">
                 <img src="${img}" alt=""width="100px" height="100px">        
             </div>
-            <div><span style="background-color:grey";>
-                <label for="Genre" style="font-size:20px" class="form-label col-sm-12">${title}</label>
+            <div class="songname"><span>
+                <label for="Genre" style="font-size:20px; color:black" class="form-label col-sm-12">${title}</label>
                 </span>
             </div>
-            <div ><span style="background-color:grey">
+            <div class="artistname"><span>
                 <label for="artist" style="color:blue" class="form-label col-sm-12">${artist}</label>
             </span></div> 
             `;
@@ -161,16 +161,20 @@ const UIController = (function() {
         //method to reset fields
         resetTrackDetail() {
             this.inputField().songDetail.innerHTML = '';
+
         },
 
         resetTracks() {
             this.inputField().tracks.innerHTML = '';
             this.resetTrackDetail();
+            const spotpreview=document.getElementById("spotify").classList;
+            spotpreview.remove("showme");
         },
 
         resetPlaylist() {
             this.inputField().playlist.innerHTML = '';
             this.resetTracks();
+            
         },
         
         storeToken(value) {
@@ -269,9 +273,3 @@ const APPController = (function(UICtrl, APICtrl) {
 // will need to call a method to load the genres on page load
 APPController.init();
 
-window.addEventListener('click',function(e) {
-    var spotpreview=document.getElementById("spotify");
-    if (e.target.classlist.contains('song-list')){
-        spotpreview.classList.toggle("showme");
-    }
-})

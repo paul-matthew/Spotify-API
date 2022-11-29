@@ -16,15 +16,9 @@ function dropdown(){
       }
     }
   })
-
+  function player(){
+    console.log("AH YO");
+    const spotpreview=document.getElementById("spotify").classList;
+    spotpreview.add("showme");
+  }
   
-  
-  /*
-  window.onclick = function(e) {
-    if (!e.target.matches('.menubtn') && !e.target.matches('.menubar')) {
-    var myDropdownop = document.getElementById("mydropdown");
-      if (myDropdownop.classList.contains('showme')) {
-        myDropdownop.classList.remove('showme');
-      }
-    }
-  }*/

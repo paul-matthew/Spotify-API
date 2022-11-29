@@ -138,10 +138,14 @@ border-style: hidden;
   width: 50%;
 }
 
-.preview{
-  display:none;
-  position:relative;
-  top:40px;
-
+.songname, .artistname{
+  background-color:white; 
+  box-shadow: 0.5em 0 0 white,-0.5em 0 0 white;
+  width:200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+.songname span{
+  width:100px;
+}
+  
