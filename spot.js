@@ -17,7 +17,6 @@ function dropdown(){
     }
   })
   function player(){
-    console.log("AH YO");
     const spotpreview=document.getElementById("spotify").classList;
     spotpreview.add("showme");
   }

@@ -156,9 +156,8 @@ body{
 .dropdown {
   display:none;
   position:relative;
-  bottom:13px;
-  width: 90px;
-  background-color: red;
+  bottom:15px;
+  background-color: blueviolet;
   overflow: hidden;
   font-family: sans-serif;
 }
@@ -184,7 +183,6 @@ body{
 }
 .dropdown a:hover {
   background-color: #ddd;
-  width: 90px;
   color: black;
 }
 
