@@ -148,15 +148,17 @@ const UIController = (function() {
                 <img src="${img}" alt=""width="100px" height="100px">        
             </div>
             <div class="songname"><span>
-                <label for="Genre" style="font-size:20px; color:black" class="form-label col-sm-12">${title}</label>
+                <label for="Genre" style="font-size:20px; color:black" class="form-label">${title}</label>
                 </span>
             </div>
             <div class="artistname"><span>
-                <label for="artist" style="color:blue" class="form-label col-sm-12">${artist}</label>
+                <label for="artist" style="color:blue" class="form-label">${artist}</label>
             </span></div> 
             `;
 
             detailDiv.insertAdjacentHTML('beforeend', html)
+
+
         },
         //method to reset fields
         resetTrackDetail() {
@@ -167,8 +169,9 @@ const UIController = (function() {
         resetTracks() {
             this.inputField().tracks.innerHTML = '';
             this.resetTrackDetail();
-            const spotpreview=document.getElementById("spotify").classList;
+            const spotpreview=document.getElementById("newplayer").classList;
             spotpreview.remove("showme");
+            document.getElementsByTagName("body")[0].style=style="background-size:1200px;overflow-y:auto; background-color:#410c1c;background-image:url('hands.jpeg'); background-position:center;background-repeat:no-repeat";
         },
 
         resetPlaylist() {

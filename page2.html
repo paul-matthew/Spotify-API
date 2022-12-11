@@ -12,7 +12,7 @@
 
         <title>Spotify API</title>
     </head>
-    <body style="overflow-y:auto; background-color:#410c1c;background-image:url('ripple_backg.gif'); background-position:center;background-repeat:no-repeat">
+    <body style="background-size:1200px;overflow-y:auto; background-color:#190114;background-image:url('hands.jpeg'); background-position:center;background-repeat:no-repeat;">
       <!-- Banner -->
       <div class="menu">
         <div class="banner">
@@ -71,7 +71,8 @@
             </div>
         </div>
         <div>
-          <iframe class="preview" id="spotify"style="border-radius:12px" src="https://open.spotify.com/embed/track/4KW1lqgSr8TKrvBII0Brf8?utm_source=generator" width="70%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe class="preview" id="spotify"style="border-radius:12px" src="https://open.spotify.com/embed/track/4KW1lqgSr8TKrvBII0Brf8?utm_source=generator" width="70%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <audio class="preview" id="newplayer" controls onplay="playtrack()" onpause="pausetrack()" type="audio/mpeg" src="https://p.scdn.co/mp3-preview/ad57003c15e607c0d74c8a25ed7581c770b28a9a?cid=774b29d4f13844c495f206cafdad9c86" preload="auto"></audio>
         </div>   
       </div>
 
