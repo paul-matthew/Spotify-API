@@ -69,6 +69,17 @@ const APIController = (function() {
         return spot;
     }
 
+    const _getPreview = async (token, trackpreview) => {
+
+        const result = await fetch(`${trackpreview}`, {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+        });
+
+        const spot = await result.json();
+        return spot.preview;
+    }
+
    
 
     return {
@@ -86,6 +97,9 @@ const APIController = (function() {
         },
         getTrack(token, trackdetail) {
             return _getTrack(token, trackdetail);
+        },
+        getPreview(token, trackpreview) {
+            return _getPreview(token, trackpreview);
         }
     }
 })();
@@ -101,7 +115,8 @@ const UIController = (function() {
         buttonSubmit: '#btn_submit',
         divSongDetail: '#song-detail',
         hfToken: '#hidden_token',
-        divSonglist: '.song-list'
+        divSonglist: '.song-list',
+        preview:'.songpreview'
     }
 
     //public methods
@@ -114,7 +129,8 @@ const UIController = (function() {
                 playlist: document.querySelector(DOMElements.selectPlaylist),
                 tracks: document.querySelector(DOMElements.divSonglist),
                 submit: document.querySelector(DOMElements.buttonSubmit),
-                songDetail: document.querySelector(DOMElements.divSongDetail)
+                songDetail: document.querySelector(DOMElements.divSongDetail),
+                songPreview: document.querySelector(DOMElements.preview)
             }
         },
 
@@ -158,9 +174,19 @@ const UIController = (function() {
 
             detailDiv.insertAdjacentHTML('beforeend', html)
 
+        },
+
+        createPreview() {
+            const html = `<audio class="preview" id="newplayer" controls type="audio/mpeg" src="https://p.scdn.co/mp3-preview/ad57003c15e607c0d74c8a25ed7581c770b28a9a?cid=774b29d4f13844c495f206cafdad9c86" preload="auto"></audio>`;
+            document.querySelector(DOMElements.songPreview).insertAdjacentHTML('beforeend', html);
+        },
+
+        //method to reset fields
+        resetPreview() {
+            this.inputField().songPreview.innerHTML = '';
 
         },
-        //method to reset fields
+
         resetTrackDetail() {
             this.inputField().songDetail.innerHTML = '';
 
@@ -171,7 +197,7 @@ const UIController = (function() {
             this.resetTrackDetail();
             const spotpreview=document.getElementById("newplayer").classList;
             spotpreview.remove("showme");
-            document.getElementsByTagName("body")[0].style=style="background-size:1200px;overflow-y:auto; background-color:#410c1c;background-image:url('hands.jpeg'); background-position:center;background-repeat:no-repeat";
+            document.getElementsByTagName("body")[0].style=style="background-size:1200px;overflow-y:auto; background-color:#190114;background-image:url('hands.jpeg'); background-position:center;background-repeat:no-repeat";
         },
 
         resetPlaylist() {
@@ -261,9 +287,6 @@ const APPController = (function(UICtrl, APICtrl) {
         UICtrl.createTrackDetail(track.album.images[2].url, track.name, track.artists[0].name);
     });
     
-
-    
-
     return {
         init() {
             console.log('App is starting');

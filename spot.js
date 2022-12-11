@@ -31,14 +31,14 @@ function dropdown(){
     console.log("AH YO");
     /*var x=document.getElementById("newplayer");
     x.play()*/
-    document.getElementsByTagName("body")[0].style="background-size:1200px;overflow-y:auto; background-image:url('hands.gif'); background-color:#410c1c;background-position:center;background-repeat:no-repeat"
+    document.getElementsByTagName("body")[0].style="background-size:1200px;overflow-y:auto; background-image:url('hands.gif'); background-color:#190114;background-position:center;background-repeat:no-repeat"
   }
 
   function pausetrack(){
     console.log("AH YO");
     /*var x=document.getElementById("newplayer");
     x.play()*/
-    document.getElementsByTagName("body")[0].style="background-size:1200px;overflow-y:auto; background-image:url('hands.jpeg'); background-color:#410c1c;background-position:center;background-repeat:no-repeat;"
+    document.getElementsByTagName("body")[0].style="background-size:1200px;overflow-y:auto; background-image:url('hands.jpeg'); background-color:#190114;background-position:center;background-repeat:no-repeat"
   }
   
 
