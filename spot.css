@@ -27,6 +27,26 @@ body{
         transform: translate(-50%, -50%);      
    }
 
+.homeplayer {
+        position: fixed;
+        text-align: center;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);      
+   }
+.playbtn, .pausebtn{
+  background-color: transparent;
+  border:none;
+  font-size:25px;
+}
+
+.pausebtn{
+  display:none;
+}
+.hideplay{
+  display:none;
+}
+
 .funkytitle {
   position: fixed;
   text-align: center;

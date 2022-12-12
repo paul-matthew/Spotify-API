@@ -32,6 +32,13 @@
             <a class="btn btn-outline-light btn-lg" href="#!" role="button" onclick="location.href = 'page2.html';" id="myButton">LAUNCH</a>
               <span class="funkytitle">Spotify API</span>
         </div>
+        <div class="homeplayer" >
+          <audio id="hiddenplayer" hidden onplay="audiovolume()" controls type="audio/mpeg" src="https://p.scdn.co/mp3-preview/ee817030edf453e5749885e706810d5fa4e0cd44?cid=774b29d4f13844c495f206cafdad9c86" preload="auto"></audio>
+          <div>
+            <button id="playbtn" class="playbtn" onclick="document.getElementById('hiddenplayer').play(), audiovolume(),pausetog(),playtog()">▶️</button>
+            <button id="pausebtn" class="pausebtn" onclick="document.getElementById('hiddenplayer').pause(), playtog(),pausetog()">⏸️</button>
+          </div>
+        </div>
       </div>
       <!-- Background image -->
 
