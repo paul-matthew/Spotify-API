@@ -50,7 +50,7 @@ body{
 .funkytitle {
   position: fixed;
   text-align: center;
-  top: -375%;
+  top: -235%;
   left: 50%;
   transform: translate(-50%, -50%);   
   display: block;
