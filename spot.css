@@ -19,6 +19,16 @@ body{
   box-shadow: 0 0px 0 red, 0 0px 0 red, 0 0px 60px magenta;
 }
 
+.backgrd3{
+  background-size:900px;
+  overflow-y:auto; 
+  background-color:#190114;
+  background-image:url('hands.jpeg'); 
+  background-position:center;
+  background-repeat:no-repeat;
+  box-shadow: 440 404px 4440 red, 4440 4440px 4440 red, 4044 500px 600px magenta;
+}
+
 .title-blk {
         position: fixed;
         text-align: center;

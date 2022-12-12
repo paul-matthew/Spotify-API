@@ -14,7 +14,7 @@ function dropdown(){
   function myFunction(x) {
   x.classList.toggle("change");
   }
-  
+
   // Close the dropdown menu if the user clicks outside of it
   
   window.addEventListener('click', function(e) {
@@ -40,14 +40,18 @@ function dropdown(){
     console.log("AH YO");
     /*var x=document.getElementById("newplayer");
     x.play()*/
-    document.getElementsByTagName("body")[0].style="background-size:1200px;overflow-y:auto; background-image:url('hands.gif'); background-color:#190114;background-position:center;background-repeat:no-repeat"
+    document.getElementsByTagName("body")[0].style="background-image:url('hands.gif');"
+    document.getElementsByTagName("body")[0].class="backgrd3"
+
   }
 
   function pausetrack(){
     console.log("AH YO");
     /*var x=document.getElementById("newplayer");
     x.play()*/
-    document.getElementsByTagName("body")[0].style="background-size:1200px;overflow-y:auto; background-image:url('hands.jpeg'); background-color:#190114;background-position:center;background-repeat:no-repeat"
+    document.getElementsByTagName("body")[0].style="background-image:url('hands.jpeg');"
+    document.getElementsByTagName("body")[0].class="backgrd3"
+
   }
 
     function audiovolume(){

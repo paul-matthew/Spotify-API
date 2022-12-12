@@ -197,7 +197,9 @@ const UIController = (function() {
             this.resetTrackDetail();
             const spotpreview=document.getElementById("newplayer").classList;
             spotpreview.remove("showme");
-            document.getElementsByTagName("body")[0].style=style="background-size:1200px;overflow-y:auto; background-color:#190114;background-image:url('hands.jpeg'); background-position:center;background-repeat:no-repeat";
+            document.getElementsByTagName("body")[0].style="background-image:url('hands.jpeg');";
+            document.getElementsByTagName("body")[0].class="backgrd3";
+
         },
 
         resetPlaylist() {
