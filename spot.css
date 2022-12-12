@@ -129,11 +129,11 @@ body{
 
 @keyframes mymove{
   from {top:0px; left:0px}
-  to{top:10px; left:10px}
+  to{top:0px; left:10px}
 }
 @keyframes mymove2{
   from {top:0px; left:0px}
-  to{top:-10px; left:-10px}
+  to{top:0px; left:-10px}
 }
 
 
