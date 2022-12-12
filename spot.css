@@ -13,7 +13,7 @@ body{
   height:300px;
   width:300px;
   position: fixed;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);  
   box-shadow: 0 0px 0 red, 0 0px 0 red, 0 0px 60px magenta;
@@ -40,8 +40,8 @@ body{
 .homeplayer {
         position: fixed;
         text-align: center;
-        top: 94%;
-        left: 10%;
+        top: 15%;
+        left: 50%;
         transform: translate(-50%, -50%);      
    }
 .playbtn, .pausebtn{
@@ -60,7 +60,7 @@ body{
 .funkytitle {
   position: fixed;
   text-align: center;
-  top: -235%;
+  top: -455%;
   left: 50%;
   transform: translate(-50%, -50%);   
   display: block;
@@ -72,7 +72,7 @@ body{
 }
 .btn{
   position: relative;
-  top:135px;
+  top:120px;
   border-color: white;
   }
 
