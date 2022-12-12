@@ -10,12 +10,12 @@ body{
   background: url("soundwaves2.gif") no-repeat left / 100%;
   /*animation: animatedBackground 60s linear infinite alternate;*/
   background-size:100% 100%;
-  height: 600px;
+  height:300px;
+  width:300px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);  
-  width: 700px;
   box-shadow: 0 0px 0 red, 0 0px 0 red, 0 0px 60px magenta;
 }
 
@@ -30,8 +30,8 @@ body{
 .homeplayer {
         position: fixed;
         text-align: center;
-        top: 70%;
-        left: 50%;
+        top: 93%;
+        left: 10%;
         transform: translate(-50%, -50%);      
    }
 .playbtn, .pausebtn{
@@ -50,7 +50,7 @@ body{
 .funkytitle {
   position: fixed;
   text-align: center;
-  top: 55%;
+  top: -375%;
   left: 50%;
   transform: translate(-50%, -50%);   
   display: block;
@@ -62,7 +62,7 @@ body{
 }
 .btn{
   position: relative;
-  top:90px;
+  top:120px;
   border-color: white;
   }
 
