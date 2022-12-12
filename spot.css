@@ -30,7 +30,7 @@ body{
 .homeplayer {
         position: fixed;
         text-align: center;
-        top: 93%;
+        top: 94%;
         left: 10%;
         transform: translate(-50%, -50%);      
    }
@@ -62,7 +62,7 @@ body{
 }
 .btn{
   position: relative;
-  top:120px;
+  top:135px;
   border-color: white;
   }
 
